@@ -276,6 +276,7 @@ export type Mutation = {
   editRestaurant: EditRestaurantOutput;
   login: LoginOutput;
   takeOrder: TakeOrderOutput;
+  testSendMail: Scalars['Boolean'];
   verifyEmail: VerifyEmailOutput;
 };
 
