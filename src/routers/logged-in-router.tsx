@@ -5,6 +5,7 @@ import { useMe } from "../hooks/useMe";
 import { NotFound } from "../pages/404";
 import { Restaurants } from "../pages/client/restaurants";
 import { ConfirmEmail } from "../pages/user/confirm-email";
+import { EditProfile } from "../pages/user/edit-profile";
 
 const ClientRoutes = [
   <Route path="/" element={<Restaurants />} key="/" />,
@@ -26,6 +27,7 @@ export const LoggedInRouter = () => {
       <Routes>
         {data.me.role === "CLIENT" && ClientRoutes}
         <Route path="*" element={<NotFound />} key="/404" />
+        <Route path="/edit-profile" element={<EditProfile />}/>
       </Routes>
     </BrowserRouter>
   );
