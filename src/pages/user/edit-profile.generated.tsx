@@ -10,7 +10,14 @@ export type EditProfileMutationVariables = Types.Exact<{
 
 export type EditProfileMutation = { __typename?: 'Mutation', editProfile: { __typename?: 'EditProfileOutput', ok: boolean, error?: string | null } };
 
+export type EditedUserFragment = { __typename?: 'User', verified: boolean, email: string };
 
+export const EditedUserFragmentDoc = gql`
+    fragment EditedUser on User {
+  verified
+  email
+}
+    `;
 export const EditProfileDocument = gql`
     mutation editProfile($input: EditProfileInput!) {
   editProfile(input: $input) {
